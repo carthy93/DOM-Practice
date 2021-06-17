@@ -54,3 +54,48 @@ u.classList.add('new')
 
 // u.classList.remove('new')
 
+const students = [{
+    name: 'Ajay',
+    gender: 'male',
+    location: 'chennai',
+    mark: 80, 
+},
+{
+    name: 'Balu',
+    gender: 'male',
+    location: 'chennai',
+    mark: 90, 
+},
+{
+    name: 'Chithra',
+    gender: 'female',
+    location: 'kerela',
+    mark: 75, 
+},
+{
+    name: 'Dhanya',
+    gender: 'female',
+    location: 'chennai',
+    mark: 85, 
+},
+{
+    name: 'Raj',
+    gender: 'male',
+    location: 'delhi',
+    mark: 80, 
+}
+]
+
+console.log('data',students)
+
+const male = students.filter(student => student.gender == 'male')
+console.log('male', male)
+
+const female = students.filter(student => student.gender == 'female')
+console.log('female', female)
+
+const chennai = students.filter(student => student.location == 'chennai')
+console.log('chennai', chennai)
+
+const greaterthan80 = students.filter(student => student.mark > 80 )
+console.log('greaterthan80', greaterthan80)
