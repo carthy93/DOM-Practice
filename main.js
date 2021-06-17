@@ -99,3 +99,21 @@ console.log('chennai', chennai)
 
 const greaterthan80 = students.filter(student => student.mark > 80 )
 console.log('greaterthan80', greaterthan80)
+
+
+
+const newdata = students.map(student => {
+    return {...student,mark: student.mark + 10, email: 'somename@gmail.com'}
+})
+ console.log('updated', newdata)
+
+
+ let newdata2 = newdata.map(student => {
+    let obj = {
+        ...student,
+        mark: student.mark-10,
+    }
+    return obj
+})
+
+console.log('updated2', newdata2)
