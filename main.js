@@ -117,3 +117,20 @@ const newdata = students.map(student => {
 })
 
 console.log('updated2', newdata2)
+
+
+let percentage = newdata.map(student => {
+    return {...student,mark: student.mark+'%'}
+})
+
+console.log('percentage', percentage)
+
+
+const studentstotal = newdata.reduce(myfnc,0)
+
+function myfnc(total,student) {
+    return total += student.mark;
+
+}
+
+console.log('studentstotal', studentstotal/students.length )
