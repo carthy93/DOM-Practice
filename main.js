@@ -129,8 +129,8 @@ console.log('percentage', percentage)
 const studentstotal = newdata.reduce(myfnc,0)
 
 function myfnc(total,student) {
-    return total += student.mark;
+    return total += student.mark
 
 }
 
-console.log('studentstotal', studentstotal/students.length )
+console.log('studentsAverage', studentstotal/students.length )
