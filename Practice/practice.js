@@ -35,3 +35,27 @@ var x = square(4)
 
 
 console.log(x)
+
+
+const toUpper = (text) => {
+    
+   const upperCase = 
+text.toUpperCase();
+console.log(upperCase)
+}
+const input = 'hello world'
+
+toUpper('karthik');
+toUpper(input)
+
+
+
+
+// for loop
+
+let array = [11,12,31,14]
+
+
+for (i=0;i<array.length;i++) {
+    console.log(array[i])
+}

@@ -134,3 +134,6 @@ function myfnc(total,student) {
 }
 
 console.log('studentsAverage', studentstotal/students.length )
+
+
+
