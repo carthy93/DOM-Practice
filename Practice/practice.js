@@ -53,9 +53,19 @@ toUpper(input)
 
 // for loop
 
-let array = [11,12,31,14]
+let arrayy = [11,12,31,14]
 
 
-for (i=0;i<array.length;i++) {
-    console.log(array[i])
+for (i=0;i<arrayy.length;i++) {
+    console.log(arrayy[i])
 }
+
+
+arrayy.forEach(element => {
+    console.log(element)
+    
+});
+
+
+
+
