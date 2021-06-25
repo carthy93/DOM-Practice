@@ -1,3 +1,6 @@
+
+//Example 1
+
 // fetch('https://jsonplaceholder.typicode.com/photos')
 // .then((response) => response.json())
 // .then (json => {
@@ -16,6 +19,7 @@
 //  } 
 
 
+// Example 2 
 
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response) => response.json())
@@ -42,3 +46,32 @@ fetch('https://jsonplaceholder.typicode.com/users')
         document.getElementById('users').appendChild(li)
     })
 })
+
+
+//Example 3
+
+const allTodos = fetch('https://jsonplaceholder.typicode.com/todos')
+.then((response) => response.json())
+.then((data) => {
+       todos = data
+}).catch((error) => {
+    console.log('error is', error)
+})
+
+
+const activeTodos = () => {
+    console.log('Active-Todos', filterTodo(todos,true))
+
+
+}
+
+
+const completedTodos = () => {
+    console.log('Completed-Todos', filterTodo(todos,false))
+
+}
+
+
+const filterTodo = (data,status) => {
+    return data.filter((todo) => todo.completed === status)
+}
