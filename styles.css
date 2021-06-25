@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.new {
+  color: blueviolet;
+  font-size: 25px;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid blueviolet;
+  margin: 2rem;
+  background-color: rgb(53, 218, 218);
+}
