@@ -75,3 +75,38 @@ const completedTodos = () => {
 const filterTodo = (data,status) => {
     return data.filter((todo) => todo.completed === status)
 }
+
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => response.json())
+.then(data => userdetails(data))
+
+
+const userdetails = (data) => {
+    data.map((userDetails) => {
+        const userCard = document.createElement('div')
+        userCard.classList.add('users')
+        const userData = [
+            userDetails.name,
+            userDetails.email,
+            userDetails.phone,
+        ]
+        
+        userData.map((data) => {
+            const p = document.createElement('p')
+            p.innerHTML = data
+            userCard.appendChild(p)
+        })
+
+        const li = document.createElement('li')
+        li.innerHTML = userData
+        li.style.listStyleType = 'none'
+        li.appendChild(userCard)
+        document.getElementById('list').appendChild(li)
+
+
+
+    })
+}
+   
